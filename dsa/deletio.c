@@ -107,10 +107,8 @@ int main()
     printf("Original linked list:\n");
     linkedListTraversal(head);
     // head = deletionAtFirst(head);
-
     // printf("\nLinked list after deletion at first:\n");
     // linkedListTraversal(head);
-
     // head = deletionAtIndex(head, 1);
     //  printf("\nLinked list after index deletion at first:\n");
     // linkedListTraversal(head);
