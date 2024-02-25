@@ -23,7 +23,7 @@ struct node *createNode(int data)
 }
 void inorderTReversal(struct node *root)
 {
-    if (root == NULL)
+    if (root != NULL)
     {
         inorderTReversal(root->left);
         printf("%d ", root->data);
@@ -82,7 +82,7 @@ struct node * searchIter(struct node* root, int key){
 }
 void insert(struct node * root, int key){
     struct node *prev=NULL;
-    while (root==NULL)
+    while (root!=NULL)
     {
         prev=root;
         if (key==root->data)
@@ -134,7 +134,8 @@ int main(){
     p1->left = p3;
     p1->right = p4;
 
-    insert(p, 16);
-    printf("%d", p->right->right->data);
+    insert(p, 7);
+    printf("%d \n", p->right->right->data);
+    inorderTReversal(p);
     return 0;
 }
