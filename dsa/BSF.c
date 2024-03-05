@@ -65,30 +65,27 @@ int main()
     int visited[7] = {0, 0, 0, 0, 0, 0, 0};
     int a[7][7] = {
         {0, 1, 1, 1, 0, 0, 0},
-         {1, 0, 1, 0, 0, 0, 0},
-         {1, 1, 0, 1, 1, 0, 0},
-         {1, 0, 1, 0, 1, 0, 0},
-         {0, 0, 1, 1, 0, 1, 1},
-         {0, 0, 0, 0, 1, 0, 0},
-         {0, 0, 0, 0, 1, 0, 0}
-    };
+        {1, 0, 1, 0, 0, 0, 0},
+        {1, 1, 0, 1, 1, 0, 0},
+        {1, 0, 1, 0, 1, 0, 0},
+        {0, 0, 1, 1, 0, 1, 1},
+        {0, 0, 0, 0, 1, 0, 0},
+        {0, 0, 0, 0, 1, 0, 0}};
     printf("%d", i);
-    visited[i]=1;
+    visited[i] = 1;
     enqueue(&q, i);
     while (!isEmpty(&q))
     {
-        int node=dequeue(&q);
+        int node = dequeue(&q);
         for (int j = 0; j < 7; j++)
         {
-            if (a[node][j]==1&&visited[j]==0)
+            if (a[node][j] == 1 && visited[j] == 0)
             {
                 printf("%d", j);
-                visited[j]=1;
+                visited[j] = 1;
                 enqueue(&q, j);
             }
-            
         }
-       
     }
-     return 0;
+    return 0;
 }
